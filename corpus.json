@@ -1,0 +1,18 @@
+---
+layout: null
+permalink: /corpus.json
+---
+[
+{% assign docs = site.pages | where: "machine_readable", true | sort: "order" %}
+{% for page in docs %}
+  {
+    "title": {{ page.title | jsonify }},
+    "url": {{ site.url | append: site.baseurl | append: page.url | jsonify }},
+    "section": {{ page.section | default: "site" | jsonify }},
+    "description": {{ page.description | default: "" | jsonify }},
+    "date_published": {{ page.date_published | default: "" | jsonify }},
+    "last_modified": {{ page.last_modified | default: "" | jsonify }},
+    "canonical_source": {{ page.canonical_source | default: "" | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

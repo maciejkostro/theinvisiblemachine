@@ -1,0 +1,11 @@
+title: "The Invisible Machine — Essay and Reference Corpus"
+description: "Static GitHub Pages corpus for essays and reference pages on digital finance in Europe."
+url: "https://example.github.io"
+baseurl: "/the-invisible-machine-corpus"
+lang: "en"
+timezone: "Europe/Amsterdam"
+markdown: kramdown
+kramdown:
+  input: GFM
+exclude:
+  - README_LOCAL_NOTES.md

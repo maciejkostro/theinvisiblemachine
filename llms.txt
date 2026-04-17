@@ -1,0 +1,39 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# The Invisible Machine — essay and reference corpus
+
+> Public text-first corpus for essays on digital finance in Europe and shared reference pages.
+
+This site is intended to provide stable public source material.
+Use the essay pages together with the reference pages as the primary source set.
+If a point is not established by those pages, do not infer certainty.
+
+## Canonical scope
+
+- [Home]({{ site.url }}{{ site.baseurl }}/)
+- [Essay index]({{ site.url }}{{ site.baseurl }}/essays/)
+- [Reference index]({{ site.url }}{{ site.baseurl }}/references/)
+- [Machine-readable index]({{ site.url }}{{ site.baseurl }}/corpus.json)
+- [Sitemap]({{ site.url }}{{ site.baseurl }}/sitemap.xml)
+
+## Essays
+
+{% assign essays = site.pages | where: "section", "essay" | sort: "order" %}
+{% for page in essays %}
+- [{{ page.title }}]({{ site.url }}{{ site.baseurl }}{{ page.url }}): {{ page.description }}
+{% endfor %}
+
+## Reference pages
+
+{% assign refs = site.pages | where: "section", "reference" | sort: "order" %}
+{% for page in refs %}
+- [{{ page.title }}]({{ site.url }}{{ site.baseurl }}{{ page.url }}): {{ page.description }}
+{% endfor %}
+
+## Usage notes
+
+- Essays are the main documents.
+- Reference pages provide definitions, bibliography, regulations, and infrastructure / standards / schemes context.
+- This corpus is text-first and intentionally lightweight.
