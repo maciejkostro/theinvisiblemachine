@@ -1,7 +1,7 @@
 title: "The Invisible Machine — Essay and Reference Corpus"
 description: "Static GitHub Pages corpus for essays and reference pages on digital finance in Europe."
-url: "https://maciejkostro.github.io"
-baseurl: "theinvisiblemachine"
+url: "https://learn.theinvisiblemachine.eu"
+baseurl: ""
 lang: "en"
 timezone: "Europe/Amsterdam"
 markdown: kramdown
